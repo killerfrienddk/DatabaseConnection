@@ -176,12 +176,20 @@ namespace DatabaseConnection.Data {
             _dbSet.Remove(entity);
         }
 
+        /// <summary>
+        ///    Attaches the entities and changes their CurrentValues to the entities values.
+        /// </summary>
+        /// <param name="entities">The entities to update.</param>
         public void UpdateRange(List<T> entities) {
             foreach (T entity in entities) {
                 Update(entity);
             }
         }
 
+        /// <summary>
+        ///    Attaches the entity and changes CurrentValues to the entity's value.
+        /// </summary>
+        /// <param name="entity">The entity to update.</param>
         public void Update(T entity) {
             _dbSet.Attach(entity).CurrentValues.SetValues(entity);
         }
