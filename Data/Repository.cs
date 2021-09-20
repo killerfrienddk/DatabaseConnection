@@ -183,9 +183,7 @@ namespace DatabaseConnection.Data {
         }
 
         public void Update(T entity) {
-            _dbSet.Attach(entity);
-            var entry = _context.Entry(entity);
-            entry.State = EntityState.Modified;
+            _dbSet.Attach(entity).CurrentValues.SetValues(entity);
         }
     }
 }
