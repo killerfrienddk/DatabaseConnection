@@ -5,13 +5,10 @@ namespace DatabaseConnection.Data {
     public class RContext {
         private readonly DBContext _db;
 
-        /*
-            Here you can see my example on getting data for my family tree I am working on.
-            We start out by making a refrence to the to model using the Repository<Model> like I have done underneath.
-            After that we move on to the constructor.
-
-            public Repository<Member> Member { get; private set; }
-        */
+        //Here you can see my example on getting data for my family tree I am working on.
+        //We start out by making a refrence to the to model using the Repository<Model> like I have done underneath.
+        //After that we move on to the constructor.
+        //public Repository<Member> Member { get; private set; }
 
         public Repository<Member> Member { get; private set; }
         public Repository<Sex> Sex { get; private set; }
@@ -23,11 +20,9 @@ namespace DatabaseConnection.Data {
         public RContext(DBContext db) {
             _db = db;
 
-            /*
-                Here we inject the DBContext in to the Repository.
+            //Here we inject the DBContext in to the Repository.
+            //Member = new Repository<Member>(_db);
 
-                Member = new Repository<Member>(_db);
-            */
             Member = new Repository<Member>(_db);
             Sex = new Repository<Sex>(_db);
             MemberConnection = new Repository<MemberConnection>(_db);
