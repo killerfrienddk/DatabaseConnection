@@ -5,6 +5,10 @@ After that you need to add it as a project.
 
 Finally you need to add it as a Project Reference to your main project.
 
+## To get a local mysql database
+You can go get on by downloading wamp server.
+Link to guide: https://www.youtube.com/watch?v=C-50GV2uUu0
+
 You need to need to add the Services you create and the RContext in your Startup.cs or your Program.cs if it is a discord bot, they need to be set as a singleton like this:
 ## Normal .net 5 or 3.1 core projects in Startup.cs 
 ```csharp
