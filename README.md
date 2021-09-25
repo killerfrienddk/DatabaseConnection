@@ -24,6 +24,7 @@ You need to Dependency Inject the RContext by doing this in the places where you
 private readonly RContext _rContext;
 
 //In order to make a ctor just write in ctor and hit tap twice.
+//Ctor stands for constructor.
 public CTOR(RContext rContext) {
 	_rContext = rContext;
 }
