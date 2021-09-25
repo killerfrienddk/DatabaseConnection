@@ -17,9 +17,9 @@ public void ConfigureServices(IServiceCollection services) {
 private ServiceProvider ConfigureServices() {
 	ServiceCollection serviceCollection = new();
 			
-		serviceCollection
-			.AddSingleton<RContext>()
-			.AddSingleton<MemberConnectionService>() // For Services.
+	serviceCollection
+		.AddSingleton<RContext>()
+		.AddSingleton<MemberConnectionService>() // For Services.
 }
 ```
 # Setting DBContext Server Connection String
