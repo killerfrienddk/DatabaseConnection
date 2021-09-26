@@ -18,6 +18,7 @@ namespace DatabaseConnection.Data {
 
         //This is what a tipical connection string would look like.
         //Data Source=ServerName;Initial Catalog=DatabaseName;Integrated Security=False;User Id=userid;Password=password;MultipleActiveResultSets=True;
+        //Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseName;Integrated Security=True;MultipleActiveResultSets=True
         protected override void OnConfiguring(DbContextOptionsBuilder options) { // If there is a error of it failing ssl handshake try adding SSL Mode=None; at the end of the TreatTinyAsBoolean=True;
             options.UseSqlServer(Environment.GetEnvironmentVariable("connection") + "UseAffectedRows=True;TreatTinyAsBoolean=True;");
         }
