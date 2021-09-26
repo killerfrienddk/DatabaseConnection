@@ -23,7 +23,7 @@ private ServiceProvider ConfigureServices() {
 			
 	serviceCollection
 		.AddSingleton<RContext>()
-		.AddSingleton<MemberConnectionService>() // For Services.
+		.AddSingleton<MemberConnectionService>(); // For Services.
 }
 ```
 # Setting DBContext Server Connection String
