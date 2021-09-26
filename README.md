@@ -1,7 +1,7 @@
 # Installation
 First you need to add this in to your project folder.
 
-After that you need to add it as a project.
+After that you need to add it as an project.
 
 Finally you need to add it as a Project Reference to your main project.
 
@@ -9,7 +9,7 @@ Finally you need to add it as a Project Reference to your main project.
 You can go get on by downloading wamp server.
 Link to guide: https://www.youtube.com/watch?v=C-50GV2uUu0
 
-You need to need to add the Services you create and the RContext in your Startup.cs or your Program.cs if it is a discord bot, they need to be set as a singleton like this:
+You need to add the Services you create and the RContext in your Startup.cs or your Program.cs if it is a discord bot, they need to be set as a singleton like this:
 ## Normal .net 5 or 3.1 core projects in Startup.cs 
 ```csharp
 public void ConfigureServices(IServiceCollection services) {
