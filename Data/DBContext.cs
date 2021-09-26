@@ -17,9 +17,9 @@ namespace DatabaseConnection.Data {
         //Here is a guide:
 
         //This is what a tipical connection string would look like.
-        //server=ServernameHere;database=DatabaseNameHere;Uid=UsernameHere;Pwd=PasswordHere;
+        //Data Source=ServerName;Initial Catalog=DatabaseName;Integrated Security=False;User Id=userid;Password=password;MultipleActiveResultSets=True;
         protected override void OnConfiguring(DbContextOptionsBuilder options) { // If there is a error of it failing ssl handshake try adding SSL Mode=None; at the end of the TreatTinyAsBoolean=True;
-            options.UseMySQL(Environment.GetEnvironmentVariable("connection") + "UseAffectedRows=True;TreatTinyAsBoolean=True;");
+            options.UseSqlServer(Environment.GetEnvironmentVariable("connection") + "UseAffectedRows=True;TreatTinyAsBoolean=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder builder) {
