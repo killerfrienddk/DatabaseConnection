@@ -1,4 +1,6 @@
 # Installation
+[![Discord](https://discord.com/api/guilds/890629777818542092/widget.png)](https://discord.gg/2rFB54xQs7)
+
 First you need to add this in to your project folder.
 
 After that you need to add it as an project.
