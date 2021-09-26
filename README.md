@@ -5,7 +5,7 @@ After that you need to add it as a project.
 
 Finally you need to add it as a Project Reference to your main project.
 
-## To get a local mysql database
+## Get a local mysql database
 You can go get on by downloading wamp server.
 Link to guide: https://www.youtube.com/watch?v=C-50GV2uUu0
 
