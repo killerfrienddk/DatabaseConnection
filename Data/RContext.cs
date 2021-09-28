@@ -31,8 +31,6 @@ namespace DatabaseConnection.Data {
             ConnectionType = new Repository<ConnectionType>(_db);
         }
 
-
-
         public void Dispose() => _db.Dispose();
 
         /// <summary>
