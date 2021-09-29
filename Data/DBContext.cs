@@ -31,7 +31,7 @@ namespace DatabaseConnection.Data {
 
             //We use ToTable("Tablename") So it maps the table to the model.
             builder.Entity<Member>().ToTable("member");
-            //Setting the Primary Key usign the HasKey("ID") function, The key needs to be an int in mysql.
+            //Setting the Primary Key using the HasKey("ID") function, The key needs to be an int in mysql.
             //Setting the Primary Key is not needed if you just call the primary key "id" in the mysql table.
             builder.Entity<Member>().HasKey(a => a.UserID);
             builder.Entity<ConnectionType>().ToTable("connectiontype");
