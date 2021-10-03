@@ -132,7 +132,7 @@ namespace DatabaseConnection.Data {
         ///     </para>
         /// </remarks>
         /// <param name="entities"> The entities to remove. </param>
-        public void RemoveRangeAsync(List<T> entities) {
+        public void RemoveRange(List<T> entities) {
             for (int i = 0; i < entities.Count; i++) Remove(entities[i]);
         }
 
