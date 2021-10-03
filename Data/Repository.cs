@@ -92,7 +92,7 @@ namespace DatabaseConnection.Data {
         ///     or a default value if no such element is found.
         /// </summary>
         /// <param name="filter">A lambda expression function.</param>
-        /// <param name="includeProperties">IncludeProperties works like .Include how ever it just needs either a table name or a comma saparated string like this ("itemOne, itemTwo")</param>
+        /// <param name="includeProperties">IncludeProperties works like .Include how ever it just needs either a table name or a comma separated string like this ("itemOne, itemTwo")</param>
         /// <remarks>
         ///     <para>
         ///         Multiple active operations on the same context instance are not supported. Use <see langword="await" /> to ensure
