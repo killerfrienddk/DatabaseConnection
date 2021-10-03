@@ -9,6 +9,5 @@ namespace DatabaseConnection.Models {
         [JsonIgnore]
         [NotMapped]
         public Member Member { get; set; }
-
     }
 }

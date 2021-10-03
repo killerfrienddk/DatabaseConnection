@@ -22,9 +22,9 @@ namespace DatabaseConnection.Data {
         ///         be inserted into the database when <see cref="DbContext.SaveChanges()" /> is called.
         ///     </para>
         ///     <para>
-        ///         This method is async only to allow special value generators, such as the one used by
+        ///         This method is <see langword="async"/> only to allow special value generators, such as the one used by
         ///         'Microsoft.EntityFrameworkCore.Metadata.SqlServerValueGenerationStrategy.SequenceHiLo',
-        ///         to access the database asynchronously. For all other cases the non async method should be used.
+        ///         to access the database asynchronously. For all other cases the non <see langword="async"/> method should be used.
         ///     </para>
         ///     <para>
         ///         Use <see cref="EntityEntry.State" /> to set the state of only a single entity.
@@ -72,8 +72,8 @@ namespace DatabaseConnection.Data {
         ///     If no entities is found, then empty list is returned.
         /// </summary>
         /// <param name="filter">A lambda expression function.</param>
-        /// <param name="orderby">Oderby IQueryable.</param>
-        /// <param name="includeProperties">IncludeProperties works like .Include how ever it just needs either a table name or a comma saparated string like this ("itemOne, itemTwo")</param>
+        /// <param name="orderby">Orderby IQueryable.</param>
+        /// <param name="includeProperties">IncludeProperties works like .Include how ever it just needs either a table name or a comma separated string like this ("itemOne, itemTwo")</param>
         /// <returns>The entities it found, or empty list.</returns>
         public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderby = null, string includeProperties = null) {
             IQueryable<T> query = _dbSet;
@@ -176,9 +176,7 @@ namespace DatabaseConnection.Data {
             _dbSet.Remove(entity);
         }
 
-        /// <summary>
-        ///    Attaches the entities and changes their CurrentValues to the entities values.
-        /// </summary>
+        /// <summary>Attaches the entities and changes their CurrentValues to the entities values.</summary>
         /// <param name="entities">The entities to update.</param>
         public void UpdateRange(List<T> entities) {
             foreach (T entity in entities) {
@@ -186,9 +184,7 @@ namespace DatabaseConnection.Data {
             }
         }
 
-        /// <summary>
-        ///    Attaches the entity and changes CurrentValues to the entity's value.
-        /// </summary>
+        /// <summary>Attaches the entity and SetValues to the entity's value.</summary>
         /// <param name="entity">The entity to update.</param>
         public void Update(T entity) {
             _dbSet.Attach(entity).CurrentValues.SetValues(entity);
