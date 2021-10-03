@@ -16,7 +16,7 @@ namespace DatabaseConnection.Data {
         //Connection should be set in the debug environment variables.
         //Here is a guide:
 
-        //This is what a tipical connection string would look like.
+        //This is what a typical connection string would look like.
         //Data Source=ServerName;Initial Catalog=DatabaseName;Integrated Security=False;User Id=userid;Password=password;MultipleActiveResultSets=True;
         //Data Source=.\SQLEXPRESS;Initial Catalog=DatabaseName;Integrated Security=True;MultipleActiveResultSets=True
         protected override void OnConfiguring(DbContextOptionsBuilder options) { // If there is a error of it failing ssl handshake try adding SSL Mode=None; at the end of the TreatTinyAsBoolean=True;

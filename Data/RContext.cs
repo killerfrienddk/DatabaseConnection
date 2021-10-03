@@ -6,7 +6,7 @@ namespace DatabaseConnection.Data {
         private readonly DBContext _db;
 
         //Here you can see my example on getting data for my family tree I am working on.
-        //We start out by making a refrence to the to model using the Repository<Model> like I have done underneath.
+        //We start out by making a reference to the to model using the Repository<Model> like I have done underneath.
         //After that we move on to the constructor.
         //public Repository<Member> Member { get; private set; }
 
@@ -44,13 +44,13 @@ namespace DatabaseConnection.Data {
         ///     </para>
         ///     <para>
         ///         Entity Framework Core does not support multiple parallel operations being run on the same DbContext instance. This
-        ///         includes both parallel execution of async queries and any explicit concurrent use from multiple threads.
-        ///         Therefore, always await async calls immediately, or use separate DbContext instances for operations that execute
+        ///         includes both parallel execution of <see langword="async"/> queries and any explicit concurrent use from multiple threads.
+        ///         Therefore, always await <see langword="async"/> calls immediately, or use separate DbContext instances for operations that execute
         ///         in parallel. See <see href="https://aka.ms/efcore-docs-threading">Avoiding DbContext threading issues</see> for more information.
         ///     </para>
         /// </summary>
         /// <remarks>
-        ///     Ssee <see href="https://aka.ms/efcore-docs-saving-data">Saving data in EF Core</see> for more information.
+        ///     see <see href="https://aka.ms/efcore-docs-saving-data">Saving data in EF Core</see> for more information.
         /// </remarks>
         /// <param name="cancellationToken"> A <see cref="CancellationToken" /> to observe while waiting for the task to complete. </param>
         /// <returns>
