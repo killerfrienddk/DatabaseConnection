@@ -80,7 +80,7 @@ namespace DatabaseConnection.Data {
             if (filter != null) query = query.Where(filter);
             if (includeProperties != null) {
                 foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)) {
-                    query = query.Include(includeProperty);
+                    query = query.Include(includeProperty.Trim());
                 }
             }
             if (orderby != null) return await orderby(query).ToListAsync();
@@ -109,7 +109,7 @@ namespace DatabaseConnection.Data {
                 query = query.Where(filter);
             if (includeProperties != null) {
                 foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)) {
-                    query = query.Include(includeProperty);
+                    query = query.Include(includeProperty.Trim());
                 }
             }
             return await query.FirstOrDefaultAsync();
